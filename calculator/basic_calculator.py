@@ -1,6 +1,8 @@
-from typing import Union
 import re
+
+from typing import Union
 from typing import Final
+
 from calculator.abstract_calculator import AbstractCalculator
 from calculator.validators import EmptyInputValidator, RegexValidator
 
@@ -18,5 +20,5 @@ class BasicCalculator(AbstractCalculator):
         EmptyInputValidator(),
     ]
 
-    def _calculate(self, input: str) -> Union[float, int]:
-        return eval(input)
+    def _calculate(self, expression: str) -> Union[float, int]:
+        return eval(expression)

@@ -17,7 +17,7 @@ class AbstractValidator:
             ------
             exception if input string is not valid
         """
-        pass
+
 
 class RegexValidator(AbstractValidator):
     def __init__(self, pattern: str) -> None:

@@ -4,9 +4,9 @@ from calculator.basic_calculator import BasicCalculator
 from calculator.decorators import convert_exceptions, print_error_message_on_exception
 
 @convert_exceptions
-def run_calculation(input: str) -> Union[int, float]:
-    result = BasicCalculator().run(input)
-    return result 
+def run_calculation(expression: str) -> Union[int, float]:
+    result = BasicCalculator().run(expression)
+    return result
 
 @convert_exceptions
 def print_output(result, *args, **kwrgs):

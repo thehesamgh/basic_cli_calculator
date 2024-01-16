@@ -10,6 +10,7 @@ def print_error_message_on_exception(func: Callable):
             return func(*args, **kwrgs)
         except Exception as exp:
             print(exp, "\n")
+            return None
     return wrapper
 
 def convert_exceptions(func: Callable):
